@@ -1,0 +1,56 @@
+models:
+  Category:
+    name: string:80 unique
+    description: text nullable
+    status: enum:activa,inactiva default:activa
+    relationships:
+      hasMany: Zone
+
+  Sport:
+    name: string:120 unique
+    description: text nullable
+    status: enum:activa,inactiva default:activa
+    relationships:
+      hasMany: Zone
+
+  Zone:
+    category_id: id foreign onDelete:cascade
+    sport_id: id foreign onDelete:cascade
+    name: string:120
+    description: text nullable
+    price_per_hour: decimal:10,2
+    image: string:255 nullable
+    status: enum:disponible,mantenimiento,ocupada default:disponible
+    relationships:
+      belongsTo: Category, Sport
+      hasMany: Reservation
+
+  Reservation:
+    zone_id: id foreign onDelete:cascade
+    user_id: id foreign onDelete:cascade
+    customer_name: string:120
+    customer_phone: string:30
+    start_at: datetime
+    hours: integer default:1
+    end_at: datetime nullable
+    hourly_price: decimal:10,2
+    total: decimal:10,2 default:0
+    status: enum:pendiente,confirmada,cancelada,finalizada default:pendiente
+    notes: text nullable
+    relationships:
+      belongsTo: Zone
+      hasOne: Invoice
+
+  Invoice:
+    reservation_id: id foreign onDelete:cascade unique
+    invoice_number: string:40 onDelete:cascade unique
+    subtotal: decimal:10,2 default:0
+    taxes: decimal:10,2 default:0
+    total: decimal:10,2 default:0
+    status: enum:pendiente,pagada,anulada default:pendiente
+    payment_method: enum:efectivo,tarjeta,transferencia,pse nullable
+    paid_at: datetime nullable
+    pdf_path: string:255 nullable
+    payload: json nullable
+    relationships:
+      belongsTo: Reservation
