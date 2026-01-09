@@ -35,11 +35,19 @@ class InvoicesByMonthChart extends ChartWidget
             $data[] = $totalsByMonth->get($key, 0.0);
         }
 
+        $palette = ['#2563eb', '#0ea5e9', '#22c55e', '#f59e0b', '#ef4444', '#8b5cf6'];
+        $backgroundColors = [];
+
+        for ($i = 0; $i < count($data); $i++) {
+            $backgroundColors[] = $palette[$i % count($palette)];
+        }
+
         return [
             'datasets' => [
                 [
                     'label' => 'Total',
                     'data' => $data,
+                    'backgroundColor' => $backgroundColors,
                 ],
             ],
             'labels' => $labels,
