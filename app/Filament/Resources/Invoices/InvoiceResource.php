@@ -20,7 +20,7 @@ class InvoiceResource extends Resource
 {
     protected static ?string $model = Invoice::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
     protected static ?string $recordTitleAttribute = 'invoice_number';
 
@@ -50,9 +50,9 @@ class InvoiceResource extends Resource
     {
         return [
             'index' => ListInvoices::route('/'),
-            'create' => CreateInvoice::route('/create'),
+            // 'create' => CreateInvoice::route('/create'),
             'view' => ViewInvoice::route('/{record}'),
-            'edit' => EditInvoice::route('/{record}/edit'),
+            // 'edit' => EditInvoice::route('/{record}/edit'),
         ];
     }
 }
