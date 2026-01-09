@@ -20,7 +20,7 @@ class SportResource extends Resource
 {
     protected static ?string $model = Sport::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTrophy;
 
     protected static ?string $recordTitleAttribute = 'name';
 

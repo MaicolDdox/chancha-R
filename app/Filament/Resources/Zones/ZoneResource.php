@@ -20,7 +20,7 @@ class ZoneResource extends Resource
 {
     protected static ?string $model = Zone::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMap;
 
     protected static ?string $recordTitleAttribute = 'name';
 
