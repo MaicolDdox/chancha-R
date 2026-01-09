@@ -43,7 +43,7 @@ models:
 
   Invoice:
     reservation_id: id foreign onDelete:cascade unique
-    invoice_number: string:40 onDelete:cascade unique
+    invoice_number: string:40 
     subtotal: decimal:10,2 default:0
     taxes: decimal:10,2 default:0
     total: decimal:10,2 default:0
