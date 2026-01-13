@@ -22,6 +22,9 @@ class ZonesTable
                     ->searchable(),
                 TextColumn::make('name')
                     ->searchable(),
+                TextColumn::make('location')
+                    ->searchable()
+                    ->toggleable(),
                 TextColumn::make('price_per_hour')
                     ->numeric()
                     ->sortable(),

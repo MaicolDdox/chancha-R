@@ -17,6 +17,7 @@ class ZoneFactory extends Factory
             'category_id' => Category::factory(),
             'sport_id' => Sport::factory(),
             'name' => fake()->name(),
+            'location' => fake()->city(),
             'description' => fake()->text(),
             'price_per_hour' => fake()->randomFloat(2, 0, 99999999.99),
             'image' => fake()->regexify('[A-Za-z0-9]{255}'),

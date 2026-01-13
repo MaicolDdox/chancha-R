@@ -22,6 +22,8 @@ class ZoneForm
                     ->required(),
                 TextInput::make('name')
                     ->required(),
+                TextInput::make('location')
+                    ->label('Location'),
                 Textarea::make('description')
                     ->columnSpanFull(),
                 TextInput::make('price_per_hour')
