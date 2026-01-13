@@ -17,6 +17,8 @@ class ZoneInfolist
                 TextEntry::make('sport.name')
                     ->label('Sport'),
                 TextEntry::make('name'),
+                TextEntry::make('location')
+                    ->placeholder('-'),
                 TextEntry::make('description')
                     ->placeholder('-')
                     ->columnSpanFull(),
