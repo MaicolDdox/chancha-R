@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Zone extends Model
 {
@@ -20,6 +22,7 @@ class Zone extends Model
         'category_id',
         'sport_id',
         'name',
+        'location',
         'description',
         'price_per_hour',
         'image',
@@ -54,5 +57,24 @@ class Zone extends Model
     public function reservations(): HasMany
     {
         return $this->hasMany(Reservation::class);
+    }
+
+    public function getImageUrlAttribute(): string
+    {
+        if ($this->image) {
+            return Storage::url($this->image);
+        }
+
+        $sport = Str::lower($this->sport?->name ?? '');
+
+        if (Str::contains($sport, 'tenis')) {
+            return asset('welcome/assets/courts/tennis.jpg');
+        }
+
+        if (Str::contains($sport, 'basquet')) {
+            return asset('welcome/assets/courts/basketball.jpg');
+        }
+
+        return asset('welcome/assets/courts/football.jpg');
     }
 }
