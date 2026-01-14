@@ -1,11 +1,43 @@
-# Cancha-R
 
-<!-- Logo del software -->
 <p align="center">
-  <img src="docs/logo.png" alt="Logo Cancha-R" width="180">
+    <a href="https://github.com/MaicolDdox/chancha-R"_blank>
+      <img src="docs/assets/logoTipo.png" width="260" alt="Logo de CrediSeal API">
+    </a>
 </p>
 
-Plataforma web para la gestion y reserva de canchas deportivas. Incluye un panel administrativo para administrar catalogo y operaciones, y un flujo de cliente para explorar canchas, crear reservas y completar pagos simulados.
+<p align="center">
+  <a href="https://www.linkedin.com/in/maicol-duvan-gasca-rodas-4483923a4/?trk=public-profile-join-page" target="_blank" title="LinkedIn" style="text-decoration:none;">
+    <img src="docs/assets/social/linkedin.png" height="22" alt="LinkedIn" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">LinkedIn</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.instagram.com/maicolddox_?utm_source=qr&igsh=cTV6enRlMW05bjY3" target="_blank" title="Instagram" style="text-decoration:none;">
+    <img src="docs/assets/social/instagram.png" height="22" alt="Instagram" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Instagram</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/MaicolDdox" target="_blank" title="GitHub" style="text-decoration:none;">
+    <img src="docs/assets/social/github.png" height="22" alt="GitHub" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">GitHub</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://discordapp.com/users/1425631850453270543" target="_blank" title="Discord" style="text-decoration:none;">
+    <img src="docs/assets/social/discord.png" height="22" alt="Discord" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Discord</span>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:maicolindustriascode@gmail.com" target="_blank" title="Email" style="text-decoration:none;">
+    <img src="docs/assets/social/gmail.png" height="22" alt="Email" style="vertical-align:middle;">
+    <span style="margin-left:6px; vertical-align:middle;">Email</span>
+  </a>
+</p>
+
+<div align="center">
+  <h1>Cancha-R</h1>
+  <p>Plataforma web para la gestion y reserva de canchas deportivas. Incluye un panel administrativo para administrar catalogo y operaciones, y un flujo de cliente para explorar canchas, crear reservas y completar pagos simulados.</p>
+</div>
+
+---
 
 ## Administrador
 
